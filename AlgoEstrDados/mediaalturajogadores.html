@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let soma  = 0
+        let media = 0
+        let jogadores = parseInt(prompt("digite a quantidade de jogadores"))
+
+        for(let i=1; i <= jogadores; i++){
+            let altura = parseFloat(prompt("digite a altura do jogador"))
+            soma += altura
+            media = soma/jogadores
+        }
+        window.alert("a media das alturas dos jogadores é: " +media)
+    </script>
+</body>
+</html>

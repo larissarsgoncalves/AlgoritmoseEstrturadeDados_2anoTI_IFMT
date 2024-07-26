@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //let mes = prompt(window.alert("Insira o numero referente ao mes desejado"))
+
+    //if (mes>1 && mes<=3){
+    //    window.alert("Primeiro bimeste")
+    //} 
+    //else if (mes >3 && mes <= 6){
+    //    window.alert("Segundo bimestre")
+    //}
+    //else if ()
+
+    var numero = prompt(window.alert("insira um valor, para encerrar digite um numero negativo"))
+    let cont1 = 0
+    let cont2 = 0
+    let cont3 = 0
+    while(numero>0){
+        var numero = prompt(window.alert("insira um valor, para encerrar digite um numero negativo"))
+
+        if (numero <=25){
+            cont1 += 1
+        }
+        else if(numero >= 26 && numero<50 ){
+            cont2 += 1
+        }
+        else{
+            cont3 += 1
+        }
+    
+    }
+    window.alert("foram digitados" +cont1 +"numeros entre 0 e 25")
+    window.alert("foram digitados" +cont2 +"numeros entre 25 e 50")
+    window.alert("foram digitados" +cont1 +"numeros maiores que 50")
+
+
+
+</script>
+</body>
+</html>

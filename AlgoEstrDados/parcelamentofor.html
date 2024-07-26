@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const juros = 0.0287
+        let parcela = 0
+        let compra = parseFloat(prompt("digite valor da compra"))
+        for( let i=1 ; i<=10; i++){
+            if( i<6 ){
+            parcela = compra/i
+                           
+                window.alert(`valor da parcela dividindo em ${i}x = ${parcela}`)
+            }else if (i>=6) {
+                parcela = compra/i + compra*juros
+                window.alert(`valor da parcela dividindo em ${i}x = ${parcela}`)
+            }
+            /*tentar implementar com switch case*/
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso com Senha</title>
+    <!-- escreva um programa que verifique a validade de uma senha fornecida pelo usuario. A senha
+    valida é 1234. Deve ser impressa as seguintes mensagens ACESSO PERMITIDO ou ACESSO NEGADO-->
+</head>
+
+<body>
+    <script>
+        // Solicita a senha ao usuário
+        const senhaDigitada = parseInt(prompt("Digite a senha (1234):"));
+
+        // Verifica se a senha é válida (1234)
+        if (senhaDigitada === 1234) {
+            console.log("ACESSO PERMITIDO");
+        } else {
+            console.log("ACESSO NEGADO");
+        }
+
+    </script>
+</body>
+
+</html>

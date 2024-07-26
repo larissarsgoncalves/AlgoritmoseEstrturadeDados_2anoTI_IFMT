@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // variaveis contadoras de votos
+        let votosJair = 0;
+        let votosCarlos = 0;
+        let votosNeves = 0;
+        let votosNulo = 0;
+        let votosBranco = 0;
+
+        // laço de repeticao
+       
+            while (true) {
+                const voto = parseInt(prompt("Digite o número do candidato (1 a 5) ou 6 para encerrar:"));
+                if (voto === 6) {
+                    break;
+                } else if (voto === 1) {
+                    votosJair++;
+                } else if (voto === 2) {
+                    votosCarlos++;
+                } else if (voto === 3) {
+                    votosNeves++;
+                } else if (voto === 4) {
+                    votosNulo++;
+                } else if (voto === 5) {
+                    votosBranco++;
+                } else {
+                    window.alert("Opção inválida. Digite novamente.");
+                }
+            }
+        
+
+        // Calcula o total de votos
+        const totalVotos = votosJair + votosCarlos + votosNeves + votosNulo + votosBranco;
+
+        // Calcula as porcentagens
+        const percentualNulo = (votosNulo / totalVotos) * 100;
+        const percentualBranco = (votosBranco / totalVotos) * 100;
+
+    
+        let vencedor = "Nenhum";
+        if (votosJair > votosCarlos && votosJair > votosNeves) {
+            vencedor = "Jair Rodrigues";
+        } else if (votosCarlos > votosJair && votosCarlos > votosNeves) {
+            vencedor = "Carlos Luz";
+        } else if (votosNeves > votosJair && votosNeves > votosCarlos) {
+            vencedor = "Neves Rocha";
+        }
+
+        window.alert(`Votos para Jair Rodrigues: ${votosJair}`);
+        window.alert(`Votos para Carlos Luz: ${votosCarlos}`);
+        window.alert(`Votos para Neves Rocha: ${votosNeves}`);
+        window.alert(`Votos nulos: ${votosNulo} (${percentualNulo}%)`);
+        window.alert(`Votos em branco: ${votosBranco} (${percentualBranco}%)`);
+        window.alert(`Candidato vencedor: ${vencedor}`);
+    </script>
+</body>
+
+</html>

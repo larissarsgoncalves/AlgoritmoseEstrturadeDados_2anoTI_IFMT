@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+    5.	Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em cm). Calcular e imprimir o seguinte: 
+    − Se o número de lados for igual a 3 escrever TRIÂNGULO e o valor da área 
+    − Se o número de lados for igual a 4 escrever QUADRADO e o valor da sua área. 
+    − Se o número de lados for igual a 5 escrever PENTÁGONO. 
+
+    -->
+</head>
+
+<body>
+    <script>
+        // Solicita o número de lados e a medida do lado (em cm)
+        const numeroLados = parseInt(prompt("Digite o número de lados do polígono:"));
+        const medidaLado = parseFloat(prompt("Digite a medida do lado (em cm):"));
+
+        // Calcula a área com base no número de lados
+        let area;
+        switch (numeroLados) {
+            case 3:
+                // Triângulo
+                area = (medidaLado * medidaLado / 2);
+                window.alert('TRIÂNGULO - Área:' + area);
+                break;
+            case 4:
+                // Quadrado
+                area = medidaLado ** 2;
+                window.alert('QUADRADO - Área:' + area);
+                break;
+            case 5:
+                // Pentágono
+                window.alert("PENTÁGONO");
+                break;
+            default:
+                window.alert("Polígono não reconhecido. Insira 3, 4 ou 5 lados.");
+        }
+
+    </script>
+</body>
+
+</html>

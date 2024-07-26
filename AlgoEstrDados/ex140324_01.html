@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pode votar?</title>
+
+    <!-- Escreva um programa para ler o ano de nasciento de uma pessoa e escrever uma mensagem
+    que diga se ela podera ou nao votar esse ano (não é necessario considerar o mes de nasc.)-->
+
+</head>
+
+<body>
+    <script>
+        
+        const anoNascimento = parseInt(prompt("Digite o ano de nascimento:"));
+        const anoAtual = parseInt(prompt("Digite o ano atual:"));
+
+        let idade = (anoAtual - anoNascimento);
+
+        if (idade >= 16) {
+            window.alert(`Com ${idade} anos, você pode votar!`);
+        } else {
+            window.alert(`Com ${idade} anos, você ainda não pode votar.`);
+        }
+
+    </script>
+</body>
+
+</html>
