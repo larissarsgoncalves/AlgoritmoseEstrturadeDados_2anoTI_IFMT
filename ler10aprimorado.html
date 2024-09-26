@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificar Menor Numero</title>
+</head>
+
+<body>
+    <h3>LER 10 NUMERO E VERIFICAR QUAL É O MENOR UTILIZADO, USANDO ARRAY</h3>
+    <form>
+        <label>Digite um numero:</label><br>
+        <input type="number" id="recebedora"><br>
+        <button type="button" id="armazenar"> Armazenar </button>
+        <button type="button" onclick="encontrarMenor()">Encontrar menor numero</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        let numeros = [];
+
+        document.getElementById('armazenar').onclick = function () {
+            let recebedora = parseFloat(document.getElementById('recebedora').value);
+            if (!isNaN(recebedora)) {
+                numeros.push(recebedora);
+                document.getElementById('recebedora').value = '';
+            }
+        }
+
+        function encontrarMenor() {
+            if (numeros.length > 0) {
+                let menorNumero = Math.min(...numeros)//os 3 pontos é o espalhameto, ou seja para passar em todos os valores do vetor
+
+                document.getElementById('resultado').innerText = "Os numeros digitados foram:" + numeros.join(", ") + "\n O menor numero digitado foi:" + menorNumero;
+            } else {
+                document.getElementById('resultado').innerText = "Nenhum numero foi armazenado"
+            }
+        }
+
+    </script>
+</body>
+
+</html>
